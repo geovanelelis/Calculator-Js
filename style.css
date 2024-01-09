@@ -30,7 +30,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-color);
   color: var(--font-color);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 main {
@@ -39,7 +39,6 @@ main {
   flex-direction: column;
   margin: 2.5rem auto;
   max-width: 22rem;
-  height: calc(100vh - 5rem);
   border-radius: 1.5rem;
 }
 
@@ -49,12 +48,12 @@ header .switch {
 }
 
 .switch i {
- color: var(--switch-color);
+  color: var(--switch-color);
 }
 
 .theme {
   background-color: var(--bg-color-bottom);
-  padding: .65rem 1.15rem;
+  padding: 0.65rem 1.15rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -65,7 +64,7 @@ header .switch {
 
 .switch i:hover {
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
   color: var(--color-button);
 }
 
@@ -110,14 +109,17 @@ input {
 }
 
 #inputOut {
-  border-radius: 0 0 .4rem .4rem;
+  border-radius: 0 0 0.4rem 0.4rem;
   font-size: 2.5rem;
-  padding: .5rem 1rem 1.5rem;
+  padding: 0.5rem 1rem 1.5rem;
 }
 
 #inputIn,
 #inputOut:focus {
   outline: none;
+}
+div #keys {
+  margin-bottom: 0;
 }
 
 #keys {
@@ -127,39 +129,41 @@ input {
   grid-template-columns: repeat(
     4,
     1fr
-    ); /* Alteração: usa grid para organizar os botões em 5 colunas */
-    gap: .75rem;
-    border-radius: 1.5rem;
-  }
-  
-  #equal {
-    grid-column: span 1; /* Adicionado: faz com que o #equal ocupe todas as 5 colunas */
-    grid-row: span 2;
-    font-size: 1.75rem;
-    color: var(--color-button-special-primary);
-  }
-  
-  #del img {
-    display: flex;
-    width: 1.5rem;
-    margin: auto;
-  }
-  
-  #raiz img {
-    display: flex;
-    width: 1rem;
-    margin: auto;
-  }
-  
-  #numberZero {
-    grid-column: span 2;
-  }
-  
-  #clear, .charKeyMod {
-    color: var(--color-button-special-primary);
-  }
-  
-  .charKeySpecial, .charKeySpecialSecondary {
+  ); /* Alteração: usa grid para organizar os botões em 5 colunas */
+  gap: 0.75rem;
+  border-radius: 1.5rem;
+}
+
+#equal {
+  grid-column: span 1; /* Adicionado: faz com que o #equal ocupe todas as 5 colunas */
+  grid-row: span 2;
+  font-size: 1.75rem;
+  color: var(--color-button-special-primary);
+}
+
+#del img {
+  display: flex;
+  width: 1.5rem;
+  margin: auto;
+}
+
+#raiz img {
+  display: flex;
+  width: 1rem;
+  margin: auto;
+}
+
+#numberZero {
+  grid-column: span 2;
+}
+
+#clear,
+.charKeyMod {
+  color: var(--color-button-special-primary);
+}
+
+.charKeySpecial,
+.charKeySpecialSecondary {
   color: var(--color-button-special-secondary);
 }
 
@@ -170,6 +174,12 @@ input {
 #result {
   border-width: 2px 2px 2px 0;
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (max-width: 800px) {
+  main {
+    max-width: 20rem;
+  }
 }
 
 /* footer {
