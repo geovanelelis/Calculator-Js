@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Projeto Calc.Js</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/097f562643.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <section class="switch">
+          <span class="theme">
+            <i id="switchLight" class="fa-solid fa-sun" onclick="toggleMode()"></i>
+            <i id="switchDark" class="fa-solid fa-moon" onclick="toggleMode()"></i>
+          </span>
+        </section>
+        <section class="display">
+          <input type="text" id="inputIn" />
+          <input type="text" id="inputOut" placeholder="0" />
+        </section>
+      </header>
+      <div id="keys">
+        <button id="clear">C</button>
+        <button id="del">
+          <img src="./src/excluir.png" alt="botao para excluir caracteres" />
+        </button>
+        <button class="charKeyMod" data-value="%">%</button>
+      </button>
+      <button class="charKeySpecial" data-value=" ÷ ">÷</button>
+      <button class="charKey" data-value=" ( ">(</button>
+      <button class="charKey" data-value=" ) ">)</button>
+      <button class="charKey" data-value="√" id="raiz">
+        <i class="fa-solid fa-square-root-variable"></i>
+      </button>
+      <button class="charKeySpecial" data-value=" × ">×</button>
+        <button class="charKey" data-value="7">7</button>
+        <button class="charKey" data-value="8">8</button>
+        <button class="charKey" data-value="9">9</button>
+        <button class="charKeySpecial" data-value=" - ">-</button>
+        <button class="charKey" data-value="4">4</button>
+        <button class="charKey" data-value="5">5</button>
+        <button class="charKey" data-value="6">6</button>
+        <button class="charKeySpecial" data-value=" + ">+</button>
+        <button class="charKey" data-value="1">1</button>
+        <button class="charKey" data-value="2">2</button>
+        <button class="charKey" data-value="3">3</button>
+        <button id="equal">=</button>
+        <button class="charKey" data-value="0" id="numberZero">0</button>
+        <button class="charKey" data-value=".">.</button>
+      </div>
+    </main>
+    <!-- <footer>
+      <p>
+        Criado com <span style="color: #36b2ff">&#x2764;</span> por
+        <a href="https://www.instagram.com/geovanelelis/" target="_blank"
+          >Geovane</a
+        >
+        © 2023
+      </p>
+    </footer> -->
+  </body>
+</html>
