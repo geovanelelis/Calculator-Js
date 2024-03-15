@@ -118,6 +118,7 @@ input {
 #inputOut:focus {
   outline: none;
 }
+
 div #keys {
   margin-bottom: 0;
 }
@@ -129,13 +130,13 @@ div #keys {
   grid-template-columns: repeat(
     4,
     1fr
-  ); /* Alteração: usa grid para organizar os botões em 5 colunas */
+  ); /* usa grid para organizar os botões em 5 colunas */
   gap: 0.75rem;
   border-radius: 1.5rem;
 }
 
 #equal {
-  grid-column: span 1; /* Adicionado: faz com que o #equal ocupe todas as 5 colunas */
+  grid-column: span 1; /* faz com que o #equal ocupe todas as 5 colunas */
   grid-row: span 2;
   font-size: 1.75rem;
   color: var(--color-button-special-primary);
