@@ -1,31 +1,30 @@
 import calculate from './calculate.js';
 
-const allowedKeys = [
-  '(',
-  ')',
-  '/',
-  '*',
-  '-',
-  '+',
-  '9',
-  '8',
-  '7',
-  '6',
-  '5',
-  '4',
-  '3',
-  '2',
-  '1',
-  '0',
-  '.',
-  '%',
-  '^',
-  ' ',
-];
-
 export const clickInKeys = () =>
   inputOut.addEventListener('keydown', function (ev) {
     ev.preventDefault();
+    const allowedKeys = [
+      '(',
+      ')',
+      '/',
+      '*',
+      '-',
+      '+',
+      '9',
+      '8',
+      '7',
+      '6',
+      '5',
+      '4',
+      '3',
+      '2',
+      '1',
+      '0',
+      '.',
+      '%',
+      '^',
+      ' ',
+    ];
 
     if (allowedKeys.includes(ev.key)) {
       inputOut.value += ev.key;

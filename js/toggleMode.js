@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  document
-    .querySelectorAll('#switchLight, #switchDark')
-    .forEach(function (element) {
-      element.addEventListener('click', toggleMode);
-    });
-});
-
 export default function toggleMode() {
   const html = document.documentElement;
   const switchDark = document.getElementById('switchDark');

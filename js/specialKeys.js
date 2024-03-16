@@ -20,10 +20,15 @@ const del = () =>
   document.getElementById('del').addEventListener('click', function () {
     if (inputOut.value[inputOut.value.length - 1] === ' ') {
       inputOut.value = inputOut.value.slice(0, -3);
-      return;
+    } else if (
+      inputOut.value === '' &&
+      inputIn.value[inputIn.value.length - 1] === ' '
+    ) {
+      inputIn.value = inputIn.value.slice(0, -3);
+    } else if (inputOut.value === '' && inputIn.value !== '') {
+      inputIn.value = inputIn.value.slice(0, -2);
     } else {
       inputOut.value = inputOut.value.slice(0, -1);
-      return;
     }
   });
 
